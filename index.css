@@ -9,6 +9,7 @@ body{
   background: url(./wallpaper/wallpaper.jpg) repeat center center fixed;
   background-size: cover;
 }
+/*this should work?*/
 video {
   z-index: 0;
   position: absolute;
