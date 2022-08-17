@@ -10,7 +10,11 @@
     <video loop autoplay muted id="vid">
       <source src= "./video/coding.webm" type = "video/webm; codecs=vp9">
       </video>
-      <script> document.getElementById('vid').play();
+      <script> 
+        console.log("Play video");
+        window.onload = function(){
+                  document.getElementById("vid").play();
+                }
       </script>
     <main>
       <header>

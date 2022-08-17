@@ -29,6 +29,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
+/* bilnker annimation*/
 p{
   display: inline-block;
   font-weight: bold;
