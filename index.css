@@ -1,7 +1,12 @@
+:root {
+  --bg-color: hsl(49 37% 94%);
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 24;
+}
 body, html{
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Code Pro", monospace;
   /*background: black; NOTE: YOU CANT HAVE THIS WHILE SETTING A BACKGROUND PICTURE*/
   color: #fff;
 }
@@ -16,6 +21,56 @@ header {
   flex-direction: column;
   align-items: center;
 }
+p{
+  color: white;
+  font-weight: bold;
+  position: relative;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+p::before,
+p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+p::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+p::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 header > img 
 {
   width: 7em;
@@ -28,10 +83,14 @@ header > img
 header > h1 
 {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 0.8em;
   font-weight: bold;
   border-radius: 1em;
-  box-shadow: white 0px 2px 80px 0px;
+  background-color: #000a;
+  color: #fff;
+  padding: 0.3em 0.6em;
+  border: 1px solid #fffa;
+  backdrop-filter: blur(10px)saturate(160%) contrast(180%);
 }
 ul {
   box-sizing: border-box;
@@ -41,10 +100,22 @@ ul {
 }
 
 ul > li{
-  background-color: #fff;
+  background-color: #fffa;
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
   border-radius: 10em;
   padding: 1em;
   margin: 1.4em 0;
+}
+ul > li > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+a{
+  color: black;
+  text-decoration: none;
 }
 
 
