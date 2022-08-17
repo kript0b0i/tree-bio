@@ -2,8 +2,12 @@ body, html{
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  background: black;
+  /*background: black; NOTE: YOU CANT HAVE THIS WHILE SETTING A BACKGROUND PICTURE*/
   color: #fff;
+}
+body{
+  background: url(./wallpaper/wallpaper.jpg) repeat center center fixed;
+  background-size: cover;
 }
 header {
   margin-top: 1em;
@@ -19,7 +23,7 @@ header > img
   object-fit: cover;
   border-radius: 100px;
   border: 1px solid white;
-  box-shadow: red 0px 2px 80px 0px;
+  /*box-shadow: red 0px 2px 80px 0px;*/
 }
 header > h1 
 {
@@ -27,6 +31,20 @@ header > h1
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 1em;
-  background-color: red;
-
+  box-shadow: white 0px 2px 80px 0px;
 }
+ul {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0 auto;
+  padding: 4em;
+}
+
+ul > li{
+  background-color: #fff;
+  border-radius: 10em;
+  padding: 1em;
+  margin: 1.4em 0;
+}
+
+
